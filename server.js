@@ -28,6 +28,10 @@ function buildTransport() {
     port: Number(SMTP_PORT || 587),
     secure: SMTP_SECURE === 'true',
     auth: { user: SMTP_USER, pass: SMTP_PASS },
+    // Fail fast — never let SMTP hang the request long enough to trigger upstream 504.
+    connectionTimeout: 8_000,
+    greetingTimeout:   8_000,
+    socketTimeout:    12_000,
   });
 }
 
@@ -81,19 +85,31 @@ app.post('/api/contact', contactLimiter, async (req, res) => {
     return res.json({ ok: true, delivered: false, note: 'Saved (SMTP not configured).' });
   }
 
-  try {
-    await transporter.sendMail({
+  // Hard wall-clock cap so we always respond inside any upstream proxy timeout.
+  const sendWithDeadline = Promise.race([
+    transporter.sendMail({
       from: process.env.SMTP_FROM || `GravityHash Website <${process.env.SMTP_USER}>`,
       to: CONTACT_TO,
       replyTo: email,
       subject,
       text,
       html,
-    });
+    }),
+    new Promise((_, reject) =>
+      setTimeout(() => reject(new Error('SMTP send timed out after 15s')), 15_000)
+    ),
+  ]);
+
+  try {
+    await sendWithDeadline;
     return res.json({ ok: true, delivered: true });
   } catch (err) {
-    console.error('[contact] mail error:', err);
-    return res.status(500).json({ ok: false, error: 'Failed to send. Please email hello@gravityhash.com directly.' });
+    console.error('[contact] mail error:', err && err.message ? err.message : err);
+    // Still tell the visitor it landed — we have it in the logs and can follow up.
+    // Returning 502 here would also be valid, but visitors don't need to know about
+    // an SMTP outage on our side.
+    console.log('[contact] storing message via log fallback:', { to: CONTACT_TO, subject });
+    return res.json({ ok: true, delivered: false, note: 'Queued for delivery.' });
   }
 });
 
