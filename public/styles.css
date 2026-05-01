@@ -345,9 +345,23 @@ button { font-family: inherit; }
 .section-tinted { background: linear-gradient(180deg, transparent, var(--bg-tinted) 6%, var(--bg-tinted) 94%, transparent); }
 .section-compact { padding: clamp(56px, 7vw, 88px) 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 
-.section-head { margin-bottom: 64px; max-width: 760px; }
-.section-head .h2 { margin-top: 18px; }
-.section-head-center { text-align: center; margin-inline: auto; margin-bottom: 48px; }
+.section-head {
+  margin-bottom: 64px;
+  max-width: 760px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+}
+.section-head > * { margin: 0; }
+.section-head .eyebrow { align-self: flex-start; }
+.section-head-center {
+  text-align: center;
+  margin-inline: auto;
+  margin-bottom: 48px;
+  align-items: center;
+}
+.section-head-center .eyebrow { align-self: center; }
 .section-head-center .section-sub { margin-inline: auto; }
 
 /* ── HERO ─────────────────────────────────────────────────── */
@@ -1411,11 +1425,8 @@ button { font-family: inherit; }
   50%      { box-shadow: 0 0 18px var(--accent-2); transform: scale(1.15); }
 }
 
-/* ── Section heading underline animation ──────────────────── */
-.section-head .h2 {
-  position: relative;
-  display: inline-block;
-}
+/* ── Section heading ──────────────────────────────────────── */
+.section-head .h2 { position: relative; display: block; }
 
 /* ── Smooth scroll-margin so anchors land below sticky nav ── */
 section[id] { scroll-margin-top: 76px; }
