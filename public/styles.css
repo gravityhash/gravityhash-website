@@ -311,11 +311,11 @@ button { font-family: inherit; }
 /* ── Typography ───────────────────────────────────────────── */
 .display {
   font-family: 'Space Grotesk', Inter, sans-serif;
-  font-size: clamp(28px, 3vw, 46px);
-  line-height: 1.08;
-  letter-spacing: -0.02em;
+  font-size: clamp(38px, 5.6vw, 72px);
+  line-height: 1.04;
+  letter-spacing: -0.028em;
   font-weight: 600;
-  margin: 18px 0 20px;
+  margin: 22px 0 24px;
   color: var(--fg);
 }
 .h2 {
