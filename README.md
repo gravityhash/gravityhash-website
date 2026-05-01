@@ -1,7 +1,7 @@
 # GravityHash Website
 
 The official site for [GravityHash](https://gravityhash.com) — engineering
-studio, makers of [Relay](https://relay.io). Includes a working contact form
+studio, makers of [Relay](https://relayon.io). Includes a working contact form
 that delivers inquiries to **hello@gravityhash.com**.
 
 Stack: vanilla HTML/CSS/JS frontend (no build step) + a small Express server
