@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#06070d" />
   <title>GravityHash — Engineering studio for ambitious software</title>
-  <meta name="description" content="GravityHash is an engineering studio building products, platforms, and applied-AI systems for high-growth teams. Makers of Relay." />
+  <meta name="description" content="GravityHash is a senior engineering studio building products, platforms, and applied-AI systems for high-growth teams. Makers of Relay." />
   <meta property="og:title" content="GravityHash — Engineering studio for ambitious software" />
   <meta property="og:description" content="We design, build, and operate production software for ambitious teams. Makers of Relay." />
   <meta property="og:type" content="website" />
@@ -39,61 +39,89 @@
   </header>
 
   <main>
-    <!-- HERO -->
+    <!-- ════════════════ HERO ════════════════ -->
     <section class="hero">
       <div class="container">
         <div class="hero-grid">
           <div class="hero-copy">
             <span class="eyebrow"><span class="dot"></span> Engineering studio · Bengaluru &amp; remote</span>
             <h1 class="display">
-              Engineering partner for software<br/>
-              that has to <span class="grad">work in production</span>.
+              Engineering partner<br/>
+              for software that has to<br/>
+              <span class="grad">work in production</span>.
             </h1>
             <p class="lede">
-              GravityHash is a senior engineering studio that designs, builds, and
-              operates the systems modern companies depend on — product surfaces,
-              platforms, and applied-AI infrastructure. We ship like founders, on
-              your timeline, against your numbers.
+              GravityHash is a senior engineering studio that designs, builds,
+              and operates production systems — product surfaces, platforms,
+              and applied-AI infrastructure. We ship like founders, on your
+              timeline, against your numbers.
             </p>
             <div class="cta-row">
-              <a href="#contact" class="btn btn-primary">Start a project</a>
-              <a href="#products" class="btn btn-ghost">
-                See what we're building
+              <a href="#contact" class="btn btn-primary btn-lg">
+                Start a project
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
               </a>
+              <a href="#products" class="btn btn-ghost btn-lg">See what we're building</a>
             </div>
-
-            <dl class="hero-stats">
-              <div><dt>Years average tenure</dt><dd>12+</dd></div>
-              <div><dt>Production uptime</dt><dd>99.99%</dd></div>
-              <div><dt>Time to first deploy</dt><dd>≤ 4 wks</dd></div>
-              <div><dt>Senior-only delivery</dt><dd>100%</dd></div>
-            </dl>
           </div>
 
-          <aside class="hero-card">
-            <div class="hero-card-head">
-              <span class="status-dot"></span>
-              <span class="mono">studio.signal</span>
-              <span class="mono muted">live</span>
+          <aside class="hero-panel" aria-hidden="true">
+            <div class="hero-panel-head">
+              <span class="mono muted">// what we do</span>
             </div>
-            <ul class="hero-card-list">
-              <li><span class="mono muted">14:02</span> Deployed Relay v0.42 — webhook fan-out 3.1× faster.</li>
-              <li><span class="mono muted">11:47</span> Migrated billing service to event-sourced ledger.</li>
-              <li><span class="mono muted">09:15</span> Shipped Claude-powered triage agent into production.</li>
-              <li><span class="mono muted">Yday</span> Cut p99 latency from 740ms → 180ms on flagship API.</li>
-              <li><span class="mono muted">Yday</span> Onboarded Series-B fintech partner.</li>
-            </ul>
-            <div class="hero-card-foot">
-              <span class="mono muted">— from the team's standup feed</span>
+            <div class="capability-grid">
+              <div class="capability">
+                <div class="capability-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M13 2 3 14h8l-1 8 10-12h-8z"/></svg>
+                </div>
+                <h4>Product</h4>
+                <p>Web &amp; mobile</p>
+              </div>
+              <div class="capability">
+                <div class="capability-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+                </div>
+                <h4>Applied AI</h4>
+                <p>Agents · RAG · evals</p>
+              </div>
+              <div class="capability">
+                <div class="capability-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="6" rx="1.5"/><rect x="3" y="14" width="18" height="6" rx="1.5"/><circle cx="7" cy="7" r="0.8" fill="currentColor"/><circle cx="7" cy="17" r="0.8" fill="currentColor"/></svg>
+                </div>
+                <h4>Platforms</h4>
+                <p>Multi-tenant SaaS</p>
+              </div>
+              <div class="capability">
+                <div class="capability-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12a9 9 0 0 1 18 0v3a3 3 0 0 1-3 3h-3"/><path d="M3 14h3v6H3zM18 14h3v6h-3z"/></svg>
+                </div>
+                <h4>DevOps</h4>
+                <p>Cloud &amp; infra</p>
+              </div>
             </div>
+            <a href="#services" class="hero-panel-link">
+              All six practices
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
           </aside>
         </div>
       </div>
 
+      <!-- KPI strip -->
+      <div class="container">
+        <dl class="hero-stats">
+          <div><dt>Years average tenure</dt><dd>12+</dd></div>
+          <div><dt>Production uptime</dt><dd>99.99%</dd></div>
+          <div><dt>Time to first deploy</dt><dd>≤ 4 wks</dd></div>
+          <div><dt>Senior engineers</dt><dd>100%</dd></div>
+          <div><dt>Events shipped / day</dt><dd>40M+</dd></div>
+        </dl>
+      </div>
+
+      <!-- Industries band -->
       <div class="logo-strip">
         <div class="container logo-strip-inner">
-          <span class="muted">Engineering teams trust us across</span>
+          <span class="muted">Trusted across</span>
           <ul class="industries">
             <li>Fintech</li><li>SaaS</li><li>Climate Tech</li><li>Healthcare</li><li>Developer Tools</li><li>Logistics</li>
           </ul>
@@ -101,76 +129,125 @@
       </div>
     </section>
 
-    <!-- PRODUCTS -->
+    <!-- ════════════════ STATEMENT ════════════════ -->
+    <section class="statement">
+      <div class="container">
+        <p class="statement-eyebrow">A studio, not an agency.</p>
+        <p class="statement-body">
+          We don't sell hours. We sell <em>opinions, architecture decisions,
+          and code that survives the next two years of your roadmap</em>.
+          Every engagement is staffed by senior engineers who've shipped at
+          scale — the same people in the kickoff are the people in the commit log.
+        </p>
+      </div>
+    </section>
+
+    <!-- ════════════════ PRODUCTS ════════════════ -->
     <section id="products" class="section">
       <div class="container">
         <header class="section-head">
           <span class="eyebrow"><span class="dot"></span> Products</span>
-          <div class="section-head-row">
-            <h2 class="h2">Software we build for ourselves.</h2>
-            <p class="section-sub">
-              Alongside client work, we ship products that solve problems our
-              partners hit again and again. Each one is a real bet — built,
-              operated, and supported by the same team.
-            </p>
-          </div>
+          <h2 class="h2">Software we build for ourselves.</h2>
+          <p class="section-sub">
+            Alongside client work, we ship products that solve problems our
+            partners hit again and again. Each is a real bet — built, operated,
+            and supported by the same team you'd hire for an engagement.
+          </p>
         </header>
 
-        <div class="products">
-          <article class="product product-flagship">
+        <!-- Flagship: Relay -->
+        <article class="flagship">
+          <div class="flagship-copy">
             <div class="product-meta">
               <span class="tag tag-live">● Live</span>
               <span class="mono muted">v0.42 · public beta</span>
+              <a href="https://relay.io" target="_blank" rel="noopener" class="mono link-out">
+                relay.io
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg>
+              </a>
             </div>
-            <div class="product-body">
-              <h3 class="product-name">Relay</h3>
-              <p class="product-tagline">
-                The webhook &amp; event-relay platform for B2B SaaS.
-              </p>
-              <p class="product-desc">
-                Relay handles the unsexy half of every modern SaaS — outbound
-                webhooks, inbound event ingestion, retries, signing, replay,
-                observability, and per-customer rate limits. One reliable layer
-                between your services and your customers' integrations.
-              </p>
-              <ul class="product-features">
-                <li>Sub-second fan-out at 40M+ events/day</li>
-                <li>Exactly-once delivery semantics with replay</li>
-                <li>HMAC signing, rotation, and per-tenant keys</li>
-                <li>Drop-in SDKs for Node, Python, Go, and Ruby</li>
-                <li>Full audit log + observability out of the box</li>
-              </ul>
-              <div class="product-cta">
-                <a href="https://relay.io" class="btn btn-primary btn-sm" target="_blank" rel="noopener">
-                  Visit relay.io
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg>
-                </a>
-                <a href="#contact" class="btn btn-ghost btn-sm">Request access</a>
+            <h3 class="flagship-name">Relay</h3>
+            <p class="flagship-tagline">
+              The webhook &amp; event-relay platform for B2B&nbsp;SaaS.
+            </p>
+            <p class="flagship-desc">
+              Relay handles the unsexy half of every modern SaaS — outbound
+              webhooks, inbound event ingestion, retries, signing, replay,
+              observability, and per-customer rate limits. One reliable layer
+              between your services and your customers' integrations.
+            </p>
+            <div class="flagship-features">
+              <div>
+                <h5>Reliable delivery</h5>
+                <p>Sub-second fan-out at 40M+ events / day with exactly-once semantics and full replay.</p>
+              </div>
+              <div>
+                <h5>Secure by default</h5>
+                <p>HMAC signing, automatic key rotation, and per-tenant signing keys out of the box.</p>
+              </div>
+              <div>
+                <h5>Drop-in SDKs</h5>
+                <p>Idiomatic clients for Node, Python, Go, and Ruby. Five lines from install to first event.</p>
+              </div>
+              <div>
+                <h5>Audit &amp; observability</h5>
+                <p>Full delivery log, OpenTelemetry traces, and Prometheus metrics — wired in, not bolted on.</p>
               </div>
             </div>
-            <div class="product-visual" aria-hidden="true">
-              <div class="visual-card">
-                <div class="visual-row"><span class="mono muted">POST</span><span class="mono">/v1/events</span><span class="pill ok">200</span></div>
-                <div class="visual-row"><span class="mono muted">→</span><span class="mono">webhook.delivered</span><span class="pill ok">142ms</span></div>
-                <div class="visual-row"><span class="mono muted">→</span><span class="mono">webhook.delivered</span><span class="pill ok">98ms</span></div>
-                <div class="visual-row"><span class="mono muted">↻</span><span class="mono">retry · attempt 2</span><span class="pill warn">503</span></div>
-                <div class="visual-row"><span class="mono muted">→</span><span class="mono">webhook.delivered</span><span class="pill ok">211ms</span></div>
-                <div class="visual-spark">
-                  <svg viewBox="0 0 200 50" preserveAspectRatio="none">
-                    <path d="M0,38 L20,30 L40,32 L60,18 L80,22 L100,12 L120,16 L140,8 L160,14 L180,6 L200,10"
-                          stroke="url(#sparkGrad)" fill="none" stroke-width="2"/>
-                    <defs>
-                      <linearGradient id="sparkGrad" x1="0" x2="1">
-                        <stop offset="0" stop-color="#5b6cff"/>
-                        <stop offset="1" stop-color="#a78bfa"/>
-                      </linearGradient>
-                    </defs>
-                  </svg>
-                </div>
-              </div>
+            <div class="flagship-cta">
+              <a href="https://relay.io" class="btn btn-primary" target="_blank" rel="noopener">
+                Visit relay.io
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg>
+              </a>
+              <a href="#contact" class="btn btn-ghost">Request access</a>
             </div>
-          </article>
+          </div>
 
+          <aside class="flagship-visual" aria-hidden="true">
+            <div class="visual-head">
+              <span class="dots"><span></span><span></span><span></span></span>
+              <span class="mono muted">relay · live tail</span>
+              <span class="status-dot"></span>
+            </div>
+            <div class="visual-body">
+              <div class="visual-row"><span class="mono muted">POST</span><span class="mono">/v1/events</span><span class="pill ok">200</span></div>
+              <div class="visual-row"><span class="mono muted">→</span><span class="mono">webhook.delivered</span><span class="pill ok">142ms</span></div>
+              <div class="visual-row"><span class="mono muted">→</span><span class="mono">webhook.delivered</span><span class="pill ok">98ms</span></div>
+              <div class="visual-row"><span class="mono muted">↻</span><span class="mono">retry · attempt 2</span><span class="pill warn">503</span></div>
+              <div class="visual-row"><span class="mono muted">→</span><span class="mono">webhook.delivered</span><span class="pill ok">211ms</span></div>
+              <div class="visual-row"><span class="mono muted">→</span><span class="mono">webhook.delivered</span><span class="pill ok">87ms</span></div>
+            </div>
+            <div class="visual-foot">
+              <div class="vs">
+                <span class="vs-num">40M+</span><span class="vs-lbl">events / day</span>
+              </div>
+              <div class="vs-spark">
+                <svg viewBox="0 0 200 50" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="sparkGrad" x1="0" x2="1">
+                      <stop offset="0" stop-color="#5b6cff"/>
+                      <stop offset="1" stop-color="#a78bfa"/>
+                    </linearGradient>
+                    <linearGradient id="sparkFill" x1="0" x2="0" y1="0" y2="1">
+                      <stop offset="0" stop-color="#8b5cf6" stop-opacity="0.35"/>
+                      <stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/>
+                    </linearGradient>
+                  </defs>
+                  <path d="M0,40 L20,32 L40,34 L60,18 L80,22 L100,12 L120,16 L140,8 L160,14 L180,6 L200,10 L200,50 L0,50 Z"
+                        fill="url(#sparkFill)"/>
+                  <path d="M0,40 L20,32 L40,34 L60,18 L80,22 L100,12 L120,16 L140,8 L160,14 L180,6 L200,10"
+                        stroke="url(#sparkGrad)" fill="none" stroke-width="2"/>
+                </svg>
+              </div>
+              <div class="vs">
+                <span class="vs-num">99.99%</span><span class="vs-lbl">uptime · q1</span>
+              </div>
+            </div>
+          </aside>
+        </article>
+
+        <!-- Other products -->
+        <div class="products-row">
           <article class="product">
             <div class="product-meta">
               <span class="tag tag-soon">In development</span>
@@ -179,11 +256,14 @@
             <h3 class="product-name">Singularity</h3>
             <p class="product-tagline">An evaluation harness for production LLM agents.</p>
             <p class="product-desc">
-              Build, version, and grade agent behaviors against real production
+              Build, version, and grade agent behaviours against real production
               traces. Singularity gives engineering teams a regression-test layer
               for prompts, tools, and policies — so model upgrades don't ship
               surprises.
             </p>
+            <ul class="product-stack">
+              <li>Trace replay</li><li>Eval suites</li><li>Diffing</li>
+            </ul>
           </article>
 
           <article class="product">
@@ -195,27 +275,28 @@
             <p class="product-tagline">Usage-based billing infrastructure.</p>
             <p class="product-desc">
               A drop-in metering and invoicing engine for AI-era pricing —
-              token-based, seat-based, hybrid — with sub-cent accuracy, idempotent
-              writes, and Stripe + bank rails out of the box.
+              token-based, seat-based, hybrid — with sub-cent accuracy,
+              idempotent writes, and Stripe + bank rails out of the box.
             </p>
+            <ul class="product-stack">
+              <li>Metering</li><li>Idempotent ledger</li><li>Stripe + ACH</li>
+            </ul>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- SERVICES -->
+    <!-- ════════════════ SERVICES ════════════════ -->
     <section id="services" class="section section-tinted">
       <div class="container">
         <header class="section-head">
           <span class="eyebrow"><span class="dot"></span> Services</span>
-          <div class="section-head-row">
-            <h2 class="h2">Six practices, one engineering bar.</h2>
-            <p class="section-sub">
-              We engage either as your full delivery team or alongside your
-              engineers. No outsourced bench, no junior hand-offs — every line
-              of code is written by senior engineers who care about what they ship.
-            </p>
-          </div>
+          <h2 class="h2">Six practices, one engineering bar.</h2>
+          <p class="section-sub">
+            We engage either as your full delivery team or alongside your
+            engineers. No outsourced bench, no junior hand-offs — every line of
+            code is written by senior engineers who care about what they ship.
+          </p>
         </header>
 
         <div class="services">
@@ -226,9 +307,7 @@
             <h3>Product engineering</h3>
             <p>From zero to public launch. Web and mobile product surfaces built with React, Next.js, React Native, Node, and Postgres — and the design taste to make them feel inevitable.</p>
             <ul class="service-meta">
-              <li>Next.js · Remix</li>
-              <li>React Native</li>
-              <li>Tailwind · Radix</li>
+              <li>Next.js · Remix</li><li>React Native</li><li>Tailwind · Radix</li>
             </ul>
           </article>
 
@@ -237,11 +316,9 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
             </div>
             <h3>Applied AI</h3>
-            <p>LLM agents, RAG pipelines, evaluation harnesses, and integrations with Claude, GPT-class, and open models. We've taken AI features from prototype to production, with cost and latency budgets that hold.</p>
+            <p>LLM agents, RAG pipelines, evaluation harnesses, and integrations with Claude, GPT-class, and open models. We've taken AI features from prototype to production with cost and latency budgets that hold.</p>
             <ul class="service-meta">
-              <li>Claude · OpenAI</li>
-              <li>RAG &amp; agents</li>
-              <li>Eval pipelines</li>
+              <li>Claude · OpenAI</li><li>RAG &amp; agents</li><li>Eval pipelines</li>
             </ul>
           </article>
 
@@ -252,9 +329,7 @@
             <h3>Platform engineering</h3>
             <p>Multi-tenant platforms, real-time systems, event-driven architectures, and the boring-but-critical glue that keeps revenue flowing — billing, auth, audit logs, and webhooks.</p>
             <ul class="service-meta">
-              <li>Postgres · Redis</li>
-              <li>Kafka · NATS</li>
-              <li>Multi-tenant SaaS</li>
+              <li>Postgres · Redis</li><li>Kafka · NATS</li><li>Multi-tenant SaaS</li>
             </ul>
           </article>
 
@@ -265,22 +340,18 @@
             <h3>Data &amp; analytics</h3>
             <p>End-to-end data platforms — ingestion, warehousing, dbt-driven transformations, semantic layers, and product analytics that survive scale and make decisions sharper.</p>
             <ul class="service-meta">
-              <li>BigQuery · Snowflake</li>
-              <li>dbt · Airbyte</li>
-              <li>Reverse ETL</li>
+              <li>BigQuery · Snowflake</li><li>dbt · Airbyte</li><li>Reverse ETL</li>
             </ul>
           </article>
 
           <article class="service">
             <div class="service-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12a9 9 0 0 1 18 0v3a3 3 0 0 1-3 3h-3M6 18H4a1 1 0 0 1-1-1v-2"/><path d="M3 14h3v6H3zM18 14h3v6h-3z"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12a9 9 0 0 1 18 0v3a3 3 0 0 1-3 3h-3"/><path d="M3 14h3v6H3zM18 14h3v6h-3z"/></svg>
             </div>
             <h3>DevOps &amp; cloud</h3>
             <p>Infrastructure as code on AWS, GCP, and Fly.io. Cost-aware architecture, reproducible environments, observability, and the kind of CI/CD pipelines your team actually trusts.</p>
             <ul class="service-meta">
-              <li>Terraform · Pulumi</li>
-              <li>Kubernetes · Fly</li>
-              <li>OpenTelemetry</li>
+              <li>Terraform · Pulumi</li><li>Kubernetes · Fly</li><li>OpenTelemetry</li>
             </ul>
           </article>
 
@@ -291,47 +362,75 @@
             <h3>Fractional CTO</h3>
             <p>Architecture review, hiring loops, technical due diligence, cost &amp; speed audits. We sit beside your team for as long as you need us — and not a sprint longer.</p>
             <ul class="service-meta">
-              <li>DD for VCs</li>
-              <li>Tech hiring</li>
-              <li>Architecture review</li>
+              <li>DD for VCs</li><li>Tech hiring</li><li>Architecture review</li>
             </ul>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- PROCESS -->
-    <section id="process" class="section">
+    <!-- ════════════════ DIFFERENTIATORS ════════════════ -->
+    <section class="section">
+      <div class="container">
+        <header class="section-head">
+          <span class="eyebrow"><span class="dot"></span> Why GravityHash</span>
+          <h2 class="h2">Four reasons teams pick us — and stay.</h2>
+        </header>
+        <ol class="differentiators">
+          <li>
+            <span class="diff-num">01</span>
+            <h3>Senior-only delivery</h3>
+            <p>Average <strong>12+ years</strong> of shipping experience per engineer. No junior bench, no surprise reassignments, no learning on your dime.</p>
+          </li>
+          <li>
+            <span class="diff-num">02</span>
+            <h3>You own everything</h3>
+            <p>Code, infra, accounts, documentation. We hand over a system <strong>your team can run without us</strong>, with zero lock-in.</p>
+          </li>
+          <li>
+            <span class="diff-num">03</span>
+            <h3>Ship every sprint</h3>
+            <p>Weekly demos, fortnightly retros, transparent invoicing. You ship to production <strong>every sprint</strong> — never every quarter.</p>
+          </li>
+          <li>
+            <span class="diff-num">04</span>
+            <h3>Honest about trade-offs</h3>
+            <p>If your problem is better solved by an off-the-shelf tool, we'll tell you. Our reputation is worth more than <strong>one extra invoice</strong>.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ════════════════ PROCESS ════════════════ -->
+    <section id="process" class="section section-tinted">
       <div class="container">
         <header class="section-head">
           <span class="eyebrow"><span class="dot"></span> Process</span>
-          <div class="section-head-row">
-            <h2 class="h2">How an engagement runs.</h2>
-            <p class="section-sub">
-              We use the same playbook on every project, refined over a decade
-              of shipping software. It's deliberately boring — because boring
-              ships, and ships on time.
-            </p>
-          </div>
+          <h2 class="h2">How an engagement runs.</h2>
+          <p class="section-sub">
+            We use the same playbook on every project, refined over a decade
+            of shipping software. It's deliberately boring — because boring
+            ships, and ships on time.
+          </p>
         </header>
 
         <ol class="process">
           <li>
             <span class="process-num">01</span>
             <h3>Discovery</h3>
-            <p>One week. We meet your team, read the codebase, and write a sharp project brief — scope, risks, milestones, and a fixed-fee proposal.</p>
-            <span class="process-meta mono">~ 1 week</span>
+            <p>We meet your team, read the codebase, and write a sharp project brief — scope, risks, milestones, and a fixed-fee proposal.</p>
+            <span class="process-meta mono">~ 1 week · fixed fee</span>
           </li>
           <li>
             <span class="process-num">02</span>
             <h3>Architecture</h3>
-            <p>We propose a clear technical plan: data model, service boundaries, integrations, and the smallest credible v1. Reviewed and signed off before code.</p>
+            <p>A clear technical plan: data model, service boundaries, integrations, and the smallest credible v1. Reviewed and signed off before code.</p>
             <span class="process-meta mono">~ 1–2 weeks</span>
           </li>
           <li>
             <span class="process-num">03</span>
             <h3>Build</h3>
-            <p>Weekly demos, fortnightly retros, transparent invoicing. You see progress every Friday and ship to production every sprint — never quarter.</p>
+            <p>Weekly demos, fortnightly retros, transparent invoicing. You see progress every Friday and ship to production every sprint.</p>
             <span class="process-meta mono">2–6 months</span>
           </li>
           <li>
@@ -344,15 +443,13 @@
       </div>
     </section>
 
-    <!-- WORK -->
-    <section id="work" class="section section-tinted">
+    <!-- ════════════════ WORK ════════════════ -->
+    <section id="work" class="section">
       <div class="container">
         <header class="section-head">
           <span class="eyebrow"><span class="dot"></span> Selected work</span>
-          <div class="section-head-row">
-            <h2 class="h2">Recent gravity wells.</h2>
-            <p class="section-sub">A small set of representative engagements — names redacted under NDA where required.</p>
-          </div>
+          <h2 class="h2">Recent gravity wells.</h2>
+          <p class="section-sub">A small set of representative engagements — names redacted under NDA where required.</p>
         </header>
 
         <div class="work-grid">
@@ -361,9 +458,9 @@
             <h3>Webhook delivery for a Series-B SaaS</h3>
             <p>Replaced a fragile in-house webhook system with a self-hosted Relay deployment. Cut p99 delivery latency from 4.1s to 180ms; eliminated 90% of customer-reported integration failures in the first month.</p>
             <ul class="work-stats">
-              <li><span>23×</span><span>faster delivery</span></li>
-              <li><span>40M</span><span>events/day</span></li>
-              <li><span>0</span><span>incidents in q1</span></li>
+              <li><span class="ws-num">23×</span><span class="ws-lbl">faster delivery</span></li>
+              <li><span class="ws-num">40M</span><span class="ws-lbl">events / day</span></li>
+              <li><span class="ws-num">0</span><span class="ws-lbl">incidents in q1</span></li>
             </ul>
           </article>
 
@@ -372,9 +469,9 @@
             <h3>Agentic incident operations</h3>
             <p>Built an LLM agent suite that triages PagerDuty incidents, drafts post-mortems from logs and chat history, and opens reproducer PRs for routine regressions. Now handles 60% of overnight pages without human escalation.</p>
             <ul class="work-stats">
-              <li><span>60%</span><span>auto-triaged</span></li>
-              <li><span>−45%</span><span>MTTR</span></li>
-              <li><span>3</span><span>FTEs freed</span></li>
+              <li><span class="ws-num">60%</span><span class="ws-lbl">auto-triaged</span></li>
+              <li><span class="ws-num">−45%</span><span class="ws-lbl">MTTR</span></li>
+              <li><span class="ws-num">3</span><span class="ws-lbl">FTEs freed</span></li>
             </ul>
           </article>
 
@@ -383,39 +480,22 @@
             <h3>Ledger-grade usage billing</h3>
             <p>Designed an event-sourced billing engine for a usage-priced AI product — sub-cent accuracy, idempotent retries, and Stripe + ACH rails. Survived a 12× usage spike in week one without ledger drift.</p>
             <ul class="work-stats">
-              <li><span>12×</span><span>peak surge</span></li>
-              <li><span>$0</span><span>ledger drift</span></li>
-              <li><span>6 wks</span><span>to launch</span></li>
+              <li><span class="ws-num">12×</span><span class="ws-lbl">peak surge</span></li>
+              <li><span class="ws-num">$0</span><span class="ws-lbl">ledger drift</span></li>
+              <li><span class="ws-num">6 wks</span><span class="ws-lbl">to launch</span></li>
             </ul>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- TECH -->
-    <section class="section section-compact">
-      <div class="container">
-        <header class="section-head section-head-center">
-          <span class="eyebrow"><span class="dot"></span> Stack</span>
-          <h2 class="h2">Tools we reach for first.</h2>
-          <p class="section-sub">We're language-agnostic but opinionated. These are the tools we've shipped to production hundreds of times — and the ones we'll recommend unless there's a sharp reason not to.</p>
-        </header>
-        <ul class="stack">
-          <li>TypeScript</li><li>Node.js</li><li>Next.js</li><li>React</li><li>React Native</li>
-          <li>Python</li><li>Go</li><li>PostgreSQL</li><li>Redis</li><li>Kafka</li>
-          <li>AWS</li><li>GCP</li><li>Fly.io</li><li>Terraform</li><li>Kubernetes</li>
-          <li>Claude</li><li>OpenAI</li><li>dbt</li><li>BigQuery</li><li>Snowflake</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="section">
+    <!-- ════════════════ ABOUT + TESTIMONIALS ════════════════ -->
+    <section id="about" class="section section-tinted">
       <div class="container">
         <div class="about-grid">
           <div>
             <span class="eyebrow"><span class="dot"></span> About</span>
-            <h2 class="h2">A small studio. A high gravitational pull.</h2>
+            <h2 class="h2">A small studio.<br/>A high gravitational pull.</h2>
             <p class="lede">
               GravityHash is a tight team of senior engineers, designers, and
               operators who've built and scaled software at startups and at
@@ -425,19 +505,19 @@
             <ul class="principles">
               <li>
                 <strong>Senior-only delivery.</strong>
-                <span>No junior bench, no surprise reassignments. The engineer in your standup is the engineer writing the code.</span>
+                <span>The engineer in your standup is the engineer writing the code.</span>
               </li>
               <li>
                 <strong>You own everything.</strong>
-                <span>Code, infra, accounts, documentation. We hand over a system your team can run without us.</span>
+                <span>Code, infra, accounts, documentation. Zero lock-in, ever.</span>
               </li>
               <li>
                 <strong>Weekly demos, monthly retros, transparent invoices.</strong>
-                <span>You always know what's shipped, what's blocked, and what's billable. No theatre.</span>
+                <span>You always know what's shipped, what's blocked, and what's billable.</span>
               </li>
               <li>
                 <strong>Bias to ship, bias to delete.</strong>
-                <span>The best line of code is the one we didn't write. We optimise for clarity, not cleverness.</span>
+                <span>The best line of code is the one we didn't write.</span>
               </li>
             </ul>
           </div>
@@ -459,15 +539,30 @@
       </div>
     </section>
 
-    <!-- FAQ -->
-    <section class="section section-tinted">
+    <!-- ════════════════ STACK ════════════════ -->
+    <section class="section section-compact">
       <div class="container">
-        <header class="section-head">
+        <header class="section-head section-head-center">
+          <span class="eyebrow"><span class="dot"></span> Stack</span>
+          <h2 class="h2">Tools we reach for first.</h2>
+          <p class="section-sub">Language-agnostic but opinionated. These are the tools we've shipped to production hundreds of times — and the ones we'll recommend unless there's a sharp reason not to.</p>
+        </header>
+        <ul class="stack">
+          <li>TypeScript</li><li>Node.js</li><li>Next.js</li><li>React</li><li>React Native</li>
+          <li>Python</li><li>Go</li><li>PostgreSQL</li><li>Redis</li><li>Kafka</li>
+          <li>AWS</li><li>GCP</li><li>Fly.io</li><li>Terraform</li><li>Kubernetes</li>
+          <li>Claude</li><li>OpenAI</li><li>dbt</li><li>BigQuery</li><li>Snowflake</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ════════════════ FAQ ════════════════ -->
+    <section class="section">
+      <div class="container">
+        <header class="section-head section-head-center">
           <span class="eyebrow"><span class="dot"></span> FAQ</span>
-          <div class="section-head-row">
-            <h2 class="h2">Common questions.</h2>
-            <p class="section-sub">If yours isn't here, write to us — we usually reply the same day.</p>
-          </div>
+          <h2 class="h2">Common questions.</h2>
+          <p class="section-sub">If yours isn't here, write to us — we usually reply the same day.</p>
         </header>
         <div class="faq">
           <details>
@@ -498,7 +593,27 @@
       </div>
     </section>
 
-    <!-- CONTACT -->
+    <!-- ════════════════ CTA BANNER ════════════════ -->
+    <section class="cta-banner">
+      <div class="container">
+        <div class="cta-banner-inner">
+          <div>
+            <span class="eyebrow"><span class="dot"></span> Have a hard problem?</span>
+            <h2 class="h2">We like hard problems.</h2>
+            <p>One business day to first reply. Thirty minutes for a discovery call. No commitment.</p>
+          </div>
+          <div class="cta-banner-actions">
+            <a href="#contact" class="btn btn-primary btn-lg">
+              Start the conversation
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="mailto:hello@gravityhash.com" class="btn btn-ghost btn-lg">hello@gravityhash.com</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════ CONTACT ════════════════ -->
     <section id="contact" class="section">
       <div class="container">
         <div class="contact-card">

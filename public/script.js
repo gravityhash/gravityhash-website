@@ -1,7 +1,7 @@
 (() => {
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  const revealTargets = document.querySelectorAll('.section, .hero-copy, .hero-card, .product, .service, .work-card, .process > li, .quote');
+  const revealTargets = document.querySelectorAll('.hero-copy, .hero-panel, .statement, .flagship, .product, .service, .differentiators > li, .process > li, .work-card, .quote, .cta-banner-inner, .contact-card, .stack');
   revealTargets.forEach((el) => el.classList.add('reveal'));
   const io = new IntersectionObserver(
     (entries) => {
