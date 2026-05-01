@@ -1,11 +1,12 @@
-# Relayon — GravityHash Company Website
+# GravityHash Website
 
-The official marketing site for [GravityHash](https://gravityhash.com), with a
-working contact form that delivers inquiries to **hello@gravityhash.com**.
+The official site for [GravityHash](https://gravityhash.com) — engineering
+studio, makers of [Relay](https://relay.io). Includes a working contact form
+that delivers inquiries to **hello@gravityhash.com**.
 
 Stack: vanilla HTML/CSS/JS frontend (no build step) + a small Express server
-for the contact endpoint. Deploys cleanly to any Node host (Render, Fly,
-Railway, a VPS, etc.).
+for the contact endpoint. Ships as a single Docker image — deploy to any VPS,
+Render, Fly, Railway, or Kubernetes.
 
 ## Quick start
 
@@ -19,7 +20,19 @@ npm run dev                # auto-reloads on changes
 If `SMTP_*` vars are not set, the server logs submissions to the console and
 returns a success response — useful for local development without real SMTP.
 
-## Production
+## Production — Docker (recommended)
+
+```bash
+cp .env.example .env       # fill in CONTACT_TO + SMTP_*
+docker compose up -d --build
+docker compose logs -f
+```
+
+The container exposes port `3000`, runs as a non-root user, and ships with a
+`/healthz` healthcheck baked in. Put Nginx + Let's Encrypt in front of it for
+HTTPS — see [deploy/DEPLOY.md](deploy/DEPLOY.md) for a 10-minute VPS guide.
+
+## Production — bare Node
 
 ```bash
 npm install --omit=dev
@@ -48,21 +61,23 @@ Google Workspace account via App Passwords.
 │   ├── index.html
 │   ├── styles.css
 │   ├── script.js
-│   └── assets/
+│   └── assets/            # logos, favicon
+├── deploy/
+│   ├── DEPLOY.md          # 10-minute VPS guide
+│   └── nginx.conf.example
 ├── server.js              # Express + nodemailer
+├── Dockerfile
+├── docker-compose.yml
+├── .dockerignore
 ├── package.json
 ├── .env.example
 └── README.md
 ```
 
-## Pushing to GitLab
+## Pushing to GitHub
 
 ```bash
-git init
-git add .
-git commit -m "Initial commit — GravityHash site"
-git branch -M main
-git remote add origin https://gitlab.com/gravityhash-group/relayon.git
+git remote add origin https://github.com/gravityhash/gravityhash-website.git
 git push -u origin main
 ```
 

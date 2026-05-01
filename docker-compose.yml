@@ -1,0 +1,29 @@
+# Production-style compose for a VPS.
+# Bring up with:  docker compose up -d --build
+# Tail logs with: docker compose logs -f
+# Update with:    git pull && docker compose up -d --build
+
+services:
+  web:
+    build: .
+    image: gravityhash-website:latest
+    container_name: gravityhash-web
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+    ports:
+      - "${PUBLIC_PORT:-3000}:3000"
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://127.0.0.1:3000/healthz"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "5"

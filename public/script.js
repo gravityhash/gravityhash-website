@@ -1,16 +1,7 @@
 (() => {
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  const cards = document.querySelectorAll('.card');
-  cards.forEach((card) => {
-    card.addEventListener('mousemove', (e) => {
-      const rect = card.getBoundingClientRect();
-      card.style.setProperty('--mx', `${e.clientX - rect.left}px`);
-      card.style.setProperty('--my', `${e.clientY - rect.top}px`);
-    });
-  });
-
-  const revealTargets = document.querySelectorAll('.section, .hero-inner, .card, .work, .stat');
+  const revealTargets = document.querySelectorAll('.section, .hero-copy, .hero-card, .product, .service, .work-card, .process > li, .quote');
   revealTargets.forEach((el) => el.classList.add('reveal'));
   const io = new IntersectionObserver(
     (entries) => {
