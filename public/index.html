@@ -70,42 +70,60 @@
             </div>
           </div>
 
-          <aside class="hero-panel" aria-hidden="true">
+          <aside class="hero-panel">
+            <div class="hero-panel-glow" aria-hidden="true"></div>
             <div class="hero-panel-head">
-              <span class="mono muted">// what we do</span>
+              <span class="mono"><span class="mono-prompt">~/</span>capabilities</span>
+              <span class="hero-panel-badge"><span class="status-dot"></span> active</span>
             </div>
             <div class="capability-grid">
-              <div class="capability">
-                <div class="capability-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M13 2 3 14h8l-1 8 10-12h-8z"/></svg>
+              <a href="#services" class="capability spot">
+                <div class="capability-row">
+                  <div class="capability-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M13 2 3 14h8l-1 8 10-12h-8z"/></svg>
+                  </div>
+                  <span class="capability-meta mono">01</span>
                 </div>
                 <h4>Product</h4>
-                <p>Web &amp; mobile</p>
-              </div>
-              <div class="capability">
-                <div class="capability-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+                <p>Web &amp; mobile surfaces</p>
+                <span class="capability-arrow" aria-hidden="true">→</span>
+              </a>
+              <a href="#services" class="capability spot">
+                <div class="capability-row">
+                  <div class="capability-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+                  </div>
+                  <span class="capability-meta mono">02</span>
                 </div>
                 <h4>Applied AI</h4>
                 <p>Agents · RAG · evals</p>
-              </div>
-              <div class="capability">
-                <div class="capability-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="6" rx="1.5"/><rect x="3" y="14" width="18" height="6" rx="1.5"/><circle cx="7" cy="7" r="0.8" fill="currentColor"/><circle cx="7" cy="17" r="0.8" fill="currentColor"/></svg>
+                <span class="capability-arrow" aria-hidden="true">→</span>
+              </a>
+              <a href="#services" class="capability spot">
+                <div class="capability-row">
+                  <div class="capability-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="6" rx="1.5"/><rect x="3" y="14" width="18" height="6" rx="1.5"/><circle cx="7" cy="7" r="0.8" fill="currentColor"/><circle cx="7" cy="17" r="0.8" fill="currentColor"/></svg>
+                  </div>
+                  <span class="capability-meta mono">03</span>
                 </div>
                 <h4>Platforms</h4>
                 <p>Multi-tenant SaaS</p>
-              </div>
-              <div class="capability">
-                <div class="capability-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12a9 9 0 0 1 18 0v3a3 3 0 0 1-3 3h-3"/><path d="M3 14h3v6H3zM18 14h3v6h-3z"/></svg>
+                <span class="capability-arrow" aria-hidden="true">→</span>
+              </a>
+              <a href="#services" class="capability spot">
+                <div class="capability-row">
+                  <div class="capability-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12a9 9 0 0 1 18 0v3a3 3 0 0 1-3 3h-3"/><path d="M3 14h3v6H3zM18 14h3v6h-3z"/></svg>
+                  </div>
+                  <span class="capability-meta mono">04</span>
                 </div>
                 <h4>DevOps</h4>
                 <p>Cloud &amp; infra</p>
-              </div>
+                <span class="capability-arrow" aria-hidden="true">→</span>
+              </a>
             </div>
             <a href="#services" class="hero-panel-link">
-              All six practices
+              <span>All six practices</span>
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </a>
           </aside>
@@ -115,7 +133,6 @@
       <!-- KPI strip -->
       <div class="container">
         <dl class="hero-stats">
-          <div><dt>Years average tenure</dt><dd>12+</dd></div>
           <div><dt>Production uptime</dt><dd>99.99%</dd></div>
           <div><dt>Time to first deploy</dt><dd>≤ 4 wks</dd></div>
           <div><dt>Senior engineers</dt><dd>100%</dd></div>
@@ -252,7 +269,25 @@
         </article>
 
         <!-- Other products -->
-        <div class="products-row">
+        <div class="products-row products-row-3">
+          <article class="product spot">
+            <div class="product-meta">
+              <span class="tag tag-soon">In development</span>
+              <span class="mono muted">internal · 2026</span>
+            </div>
+            <h3 class="product-name">Pulse</h3>
+            <p class="product-tagline">A modern CRM for product-led teams.</p>
+            <p class="product-desc">
+              Pulse is a CRM that treats your product data as a first-class
+              source of truth — usage signals, billing events, and support
+              touchpoints flow in alongside the pipeline, so revenue and
+              customer-success teams act on what's really happening.
+            </p>
+            <ul class="product-stack">
+              <li>Pipeline</li><li>Usage signals</li><li>Workflows</li>
+            </ul>
+          </article>
+
           <article class="product spot">
             <div class="product-meta">
               <span class="tag tag-soon">In development</span>
@@ -385,7 +420,7 @@
           <li>
             <span class="diff-num">01</span>
             <h3>Senior-only delivery</h3>
-            <p>Average <strong>12+ years</strong> of shipping experience per engineer. No junior bench, no surprise reassignments, no learning on your dime.</p>
+            <p><strong>Senior-only</strong> staffing on every engagement. No junior bench, no surprise reassignments, no learning on your dime.</p>
           </li>
           <li>
             <span class="diff-num">02</span>
@@ -703,6 +738,7 @@
         <div>
           <h5>Products</h5>
           <a href="https://relayon.io" target="_blank" rel="noopener">Relay</a>
+          <a href="#products">Pulse · CRM</a>
           <a href="#products">Singularity</a>
           <a href="#products">Orbit</a>
         </div>
