@@ -570,15 +570,57 @@ button { font-family: inherit; }
 }
 
 /* Logo strip */
-.logo-strip { margin-top: 0; border-top: none; border-bottom: 1px solid var(--line); padding: 26px 0; }
-.logo-strip-inner { display: flex; align-items: center; gap: 36px; flex-wrap: wrap; }
-.logo-strip .muted { font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.14em; }
-.industries { list-style: none; margin: 0; padding: 0; display: flex; gap: 32px; flex-wrap: wrap; }
+.logo-strip {
+  margin-top: 0;
+  border-top: none;
+  border-bottom: 1px solid var(--line);
+  padding: 22px 0;
+}
+.logo-strip-inner {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: nowrap;
+}
+@media (max-width: 640px) {
+  .logo-strip-inner { grid-template-columns: 1fr; gap: 14px; }
+}
+.logo-strip .muted {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Marquee track lives in this column and overflows hidden */
+.marquee-track {
+  position: relative;
+  overflow: hidden;
+  min-width: 0;     /* lets the grid column shrink instead of overflowing */
+  height: 28px;
+}
+
+.industries {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
 .industries li {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 15px; font-weight: 500;
-  color: rgba(255,255,255,0.55);
+  font-size: 15px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.55);
   letter-spacing: 0.02em;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  line-height: 28px;
 }
 
 /* ── STATEMENT ────────────────────────────────────────────── */
@@ -1304,49 +1346,52 @@ button { font-family: inherit; }
 .spot > * { position: relative; z-index: 1; }
 
 /* ── Industries marquee ───────────────────────────────────── */
-.logo-strip {
-  position: relative;
-  overflow: hidden;
-}
-.logo-strip-inner.is-marquee {
-  flex-wrap: nowrap;
-  white-space: nowrap;
-}
 .industries.marquee {
-  flex-wrap: nowrap;
   display: flex;
+  flex-wrap: nowrap;
   gap: 0;
-  animation: marquee 38s linear infinite;
   width: max-content;
+  animation: marquee 42s linear infinite;
+  will-change: transform;
 }
 .industries.marquee li {
-  padding: 0 22px;
+  padding: 0 28px;
   position: relative;
 }
 .industries.marquee li::after {
-  content: '·';
+  content: '';
   position: absolute;
-  right: -2px;
-  color: var(--muted-2);
-  opacity: 0.6;
+  right: -3px;
+  top: 50%;
+  width: 4px; height: 4px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+  transform: translateY(-50%);
 }
-.industries.marquee li:last-child::after { content: ''; }
-.logo-strip:hover .industries.marquee { animation-play-state: paused; }
+.marquee-track:hover .industries.marquee { animation-play-state: paused; }
 @keyframes marquee {
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
 }
-.logo-strip::before,
-.logo-strip::after {
+
+/* Soft fade on each edge of the marquee track */
+.marquee-track::before,
+.marquee-track::after {
   content: '';
   position: absolute;
   top: 0; bottom: 0;
-  width: 80px;
+  width: 64px;
   z-index: 2;
   pointer-events: none;
 }
-.logo-strip::before { left: 0;  background: linear-gradient(90deg, var(--bg), transparent); }
-.logo-strip::after  { right: 0; background: linear-gradient(-90deg, var(--bg), transparent); }
+.marquee-track::before {
+  left: 0;
+  background: linear-gradient(90deg, var(--bg) 0%, rgba(6, 7, 13, 0.6) 60%, transparent);
+}
+.marquee-track::after {
+  right: 0;
+  background: linear-gradient(-90deg, var(--bg) 0%, rgba(6, 7, 13, 0.6) 60%, transparent);
+}
 
 /* ── Count-up state ───────────────────────────────────────── */
 .hero-stats dd {
