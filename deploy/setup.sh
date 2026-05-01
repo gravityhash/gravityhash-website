@@ -19,12 +19,33 @@
 set -euo pipefail
 
 # ── Inputs ───────────────────────────────────────────────────────
-DOMAIN="${DOMAIN:?DOMAIN must be set, e.g. DOMAIN=gravityhash.com}"
-EMAIL="${EMAIL:?EMAIL must be set for Let's Encrypt, e.g. EMAIL=hello@gravityhash.com}"
+# DOMAIN and EMAIL can be set via env vars OR entered interactively.
+# Defaults are sensible so you can just press Enter.
+TTY_IN="/dev/tty"
+[ -r "$TTY_IN" ] || TTY_IN="/dev/stdin"
+
+prompt() {
+  local var_name="$1" default="$2" label="$3" answer
+  if [ -n "${!var_name:-}" ]; then return; fi
+  printf '%s [%s]: ' "$label" "$default" > /dev/tty
+  read -r answer < "$TTY_IN" || answer=""
+  printf -v "$var_name" '%s' "${answer:-$default}"
+}
+
+prompt DOMAIN "gravityhash.com"        "Domain"
+prompt EMAIL  "hello@${DOMAIN}"        "Email for Let's Encrypt"
+
 REPO="${REPO:-https://github.com/gravityhash/gravityhash-website.git}"
 APP_DIR="${APP_DIR:-/opt/gravityhash-website}"
 APP_PORT="${APP_PORT:-3000}"
 WWW_ALIAS="${WWW_ALIAS:-www.${DOMAIN}}"
+
+echo
+echo "  Domain : ${DOMAIN}"
+echo "  Email  : ${EMAIL}"
+echo "  Repo   : ${REPO}"
+echo "  Path   : ${APP_DIR}"
+echo
 
 log()  { printf '\033[1;35m▸\033[0m %s\n' "$*"; }
 ok()   { printf '\033[1;32m✔\033[0m %s\n' "$*"; }
